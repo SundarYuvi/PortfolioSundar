@@ -1681,6 +1681,57 @@
         .project-link:hover {
             color: var(--primary);
         }
+        /* Contact Section */
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--secondary));
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .contact-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-detail {
+            color: var(--gray);
+            font-size: 1rem;
+        }
         /* Resume Section */
         
         .resume-section {
@@ -1974,8 +2025,8 @@
             <a href="#about" class="active">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact" class="nav-cta">Contact</a>
+            <a href="#contact">Contact</a>
+            <a href="#resume" class="nav-cta">Resume</a>
         </nav>
 
         <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -2089,11 +2140,11 @@
                         <span class="tech-tag">Secure Payments</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        <a href="https://play.google.com/store/apps/details?id=com.salesfacepos.facepos&hl=en_IN" class="project-link" target="_blank">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
-                        <a href="#" class="project-link">
-                            <i class="fab fa-github"></i> View Code
+                        <a href="https://apps.apple.com/ie/app/facepos/id6504408425" class="project-link" target="_blank">
+                            <i class="fab fa-apple"></i> App Store
                         </a>
                     </div>
                 </div>
@@ -2113,10 +2164,7 @@
                         <span class="tech-tag">Payment Gateway</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> App Store
-                        </a>
-                        <a href="#" class="project-link">
+                        <a href="https://play.google.com/store/apps/details?id=aab.laabam.app&hl=en_ZA&pli=1" class="project-link" target="_blank">
                             <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
@@ -2137,7 +2185,7 @@
                         <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="https://play.google.com/store/apps/details?id=com.laabamone.ApurvaMerchant1&hl=en_IN" class="project-link" target="_blank">
                             <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
@@ -2156,7 +2204,38 @@
         </div>
     </section>
 
-    <footer id="contact">
+    <section class="section" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Feel free to reach out for collaborations or just to say hello!</p>
+
+        <div class="contact-info">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="contact-title">Phone</h3>
+                <p class="contact-detail">+91 7868092620</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="contact-title">Email</h3>
+                <p class="contact-detail">sundareswaran0405@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="contact-title">Address</h3>
+                <p class="contact-detail">17/A, Alwarpuram, Madurai North-02</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
         <div class="footer-content">
             <div class="footer-logo">Sundareswaran N</div>
 
@@ -2164,7 +2243,6 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#resume">Resume</a>
                 <a href="#contact">Contact</a>
             </div>
 
@@ -2281,7 +2359,7 @@
 
         // Animate elements when they come into view
         const animateOnScroll = () => {
-            const elements = document.querySelectorAll('.skill-card, .project-card');
+            const elements = document.querySelectorAll('.skill-card, .project-card, .contact-card');
 
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -2295,7 +2373,7 @@
         };
 
         // Set initial state for animation
-        document.querySelectorAll('.skill-card, .project-card').forEach(element => {
+        document.querySelectorAll('.skill-card, .project-card, .contact-card').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
             element.style.transition = 'all 0.6s ease';
