@@ -5,11 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sundareswaran N - React Native Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
+         :root {
             --primary: #ff4d9e;
             --primary-dark: #d43d84;
             --secondary: #63134e;
@@ -21,13 +20,13 @@
             --accent: #f472b6;
             --yellow: #fbbf24;
         }
-
+        
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
+        
         body {
             font-family: 'Inter', sans-serif;
             background: var(--dark-bg);
@@ -35,8 +34,8 @@
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-
         /* Animated Background */
+        
         .bg-animation {
             position: fixed;
             top: 0;
@@ -47,7 +46,7 @@
             background: linear-gradient(135deg, var(--dark), var(--secondary));
             opacity: 0.8;
         }
-
+        
         .particles {
             position: fixed;
             top: 0;
@@ -56,14 +55,14 @@
             height: 100%;
             z-index: -1;
         }
-
+        
         .particle {
             position: absolute;
             background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             animation: float 15s infinite linear;
         }
-
+        
         @keyframes float {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -74,7 +73,7 @@
                 opacity: 0;
             }
         }
-
+        
         header {
             display: flex;
             justify-content: space-between;
@@ -89,12 +88,12 @@
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
-
+        
         header.scrolled {
             padding: 1rem 4rem;
             background-color: rgba(15, 15, 15, 0.95);
         }
-
+        
         header h2 {
             font-size: 1.5rem;
             font-weight: 700;
@@ -104,16 +103,16 @@
             color: transparent;
             transition: all 0.3s ease;
         }
-
+        
         header h2:hover {
             transform: scale(1.05);
         }
-
+        
         nav {
             display: flex;
             gap: 2rem;
         }
-
+        
         nav a {
             color: var(--light);
             text-decoration: none;
@@ -122,11 +121,11 @@
             padding: 0.5rem 0;
             transition: all 0.3s ease;
         }
-
+        
         nav a:hover {
             color: var(--primary);
         }
-
+        
         nav a::after {
             content: '';
             position: absolute;
@@ -137,12 +136,12 @@
             background-color: var(--primary);
             transition: width 0.3s ease;
         }
-
+        
         nav a:hover::after {
             width: 100%;
         }
-
         /* 3D Image Hero Section */
+        
         .hero {
             display: flex;
             flex-direction: column-reverse;
@@ -154,7 +153,7 @@
             overflow: hidden;
             text-align: center;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
@@ -167,7 +166,7 @@
             z-index: -1;
             animation: pulse 15s infinite alternate;
         }
-
+        
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -178,7 +177,7 @@
                 opacity: 0.3;
             }
         }
-
+        
         .hero-content {
             display: flex;
             flex-direction: column;
@@ -186,7 +185,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
-
+        
         .hero-img-container {
             margin-bottom: 2rem;
             position: relative;
@@ -195,7 +194,7 @@
             height: 300px;
             perspective: 1000px;
         }
-
+        
         @keyframes floatImage {
             0% {
                 transform: translateY(0) rotateX(0deg) rotateY(0deg);
@@ -207,7 +206,7 @@
                 transform: translateY(0) rotateX(0deg) rotateY(0deg);
             }
         }
-
+        
         .hero-img-3d {
             width: 100%;
             height: 100%;
@@ -219,18 +218,18 @@
             transform: rotateX(10deg) rotateY(10deg);
             filter: drop-shadow(0 10px 20px rgba(255, 77, 158, 0.3));
         }
-
+        
         .hero-img-container:hover .hero-img-3d {
             transform: rotateX(15deg) rotateY(15deg) scale(1.05);
             box-shadow: 0 30px 60px rgba(255, 77, 158, 0.4);
             filter: drop-shadow(0 15px 30px rgba(255, 77, 158, 0.5));
         }
-
+        
         .hero-text {
             max-width: 100%;
             animation: fadeInUp 1s ease;
         }
-
+        
         .hero-text em {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -239,7 +238,7 @@
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
-
+        
         .hero-text h1 {
             font-size: 3rem;
             font-weight: 800;
@@ -250,7 +249,7 @@
             background-clip: text;
             color: transparent;
         }
-
+        
         .hero-subtitle {
             font-size: 1.2rem;
             color: var(--gray);
@@ -258,7 +257,7 @@
             position: relative;
             display: inline-block;
         }
-
+        
         .hero-subtitle::after {
             content: '';
             position: absolute;
@@ -268,7 +267,7 @@
             left: 25%;
             background: var(--primary);
         }
-
+        
         .availability {
             display: inline-flex;
             align-items: center;
@@ -281,7 +280,7 @@
             margin-bottom: 2rem;
             border: 1px solid rgba(255, 77, 158, 0.3);
         }
-
+        
         .availability::before {
             content: '';
             width: 8px;
@@ -290,7 +289,7 @@
             border-radius: 50%;
             animation: pulse 1.5s infinite;
         }
-
+        
         .hero-text p {
             font-size: 1.1rem;
             line-height: 1.6;
@@ -300,30 +299,30 @@
             margin-left: auto;
             margin-right: auto;
         }
-
+        
         .social-icons {
             display: flex;
             gap: 1.5rem;
             margin-top: 2rem;
             justify-content: center;
         }
-
+        
         .social-icons a {
             color: var(--light);
             font-size: 1.5rem;
             transition: all 0.3s ease;
         }
-
+        
         .social-icons a:hover {
             color: var(--primary);
             transform: translateY(-5px) scale(1.1);
         }
-
+        
         .section {
             padding: 6rem 4rem;
             position: relative;
         }
-
+        
         .section::before {
             content: '';
             position: absolute;
@@ -336,14 +335,14 @@
             opacity: 0.1;
             z-index: -1;
         }
-
+        
         .section h2 {
             font-size: 2.5rem;
             margin-bottom: 3rem;
             position: relative;
             display: inline-block;
         }
-
+        
         .section h2::after {
             content: '';
             position: absolute;
@@ -354,14 +353,14 @@
             background: linear-gradient(to right, var(--primary), var(--secondary));
             border-radius: 2px;
         }
-
+        
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             justify-content: center;
         }
-
+        
         .skills span {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             padding: 0.75rem 1.5rem;
@@ -371,18 +370,18 @@
             transition: all 0.3s ease;
             cursor: default;
         }
-
+        
         .skills span:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(255, 77, 158, 0.4);
         }
-
+        
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2.5rem;
         }
-
+        
         .project-card {
             background: var(--card-bg);
             padding: 2rem;
@@ -393,7 +392,7 @@
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-
+        
         .project-card::before {
             content: '';
             position: absolute;
@@ -403,34 +402,34 @@
             height: 5px;
             background: linear-gradient(to right, var(--primary), var(--secondary));
         }
-
+        
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(255, 77, 158, 0.4);
             border-color: rgba(255, 77, 158, 0.3);
         }
-
+        
         .project-card h3 {
             color: var(--primary);
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
             font-weight: 700;
         }
-
+        
         .project-card p {
             font-size: 1rem;
             line-height: 1.7;
             color: var(--gray);
             margin-bottom: 1.5rem;
         }
-
+        
         .project-card .tech-used {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1.5rem;
         }
-
+        
         .project-card .tech-used span {
             font-size: 0.75rem;
             background: rgba(255, 77, 158, 0.1);
@@ -439,7 +438,7 @@
             border-radius: 50px;
             border: 1px solid rgba(255, 77, 158, 0.3);
         }
-
+        
         .resume-section {
             text-align: center;
             padding: 4rem;
@@ -451,7 +450,7 @@
             position: relative;
             overflow: hidden;
         }
-
+        
         .resume-section::before {
             content: '';
             position: absolute;
@@ -463,7 +462,7 @@
             animation: rotate 20s linear infinite;
             z-index: -1;
         }
-
+        
         .resume-btn {
             display: inline-flex;
             align-items: center;
@@ -481,16 +480,16 @@
             border: none;
             cursor: pointer;
         }
-
+        
         .resume-btn:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(255, 77, 158, 0.6);
         }
-
+        
         .resume-btn i {
             font-size: 1.2rem;
         }
-
+        
         footer {
             text-align: center;
             padding: 3rem;
@@ -498,7 +497,7 @@
             color: var(--gray);
             position: relative;
         }
-
+        
         footer::before {
             content: '';
             position: absolute;
@@ -508,11 +507,11 @@
             height: 2px;
             background: linear-gradient(to right, transparent, var(--primary), transparent);
         }
-
+        
         footer p {
             margin-bottom: 1.5rem;
         }
-
+        
         .back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -532,18 +531,18 @@
             transition: all 0.3s ease;
             z-index: 99;
         }
-
+        
         .back-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
-
+        
         .back-to-top:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(255, 77, 158, 0.6);
         }
-
         /* Animations */
+        
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -552,7 +551,7 @@
                 opacity: 1;
             }
         }
-
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -563,7 +562,7 @@
                 transform: translateY(0);
             }
         }
-
+        
         @keyframes rotate {
             0% {
                 transform: rotate(0deg);
@@ -572,65 +571,55 @@
                 transform: rotate(360deg);
             }
         }
-
         /* Responsive Design */
+        
         @media (max-width: 1024px) {
             .hero {
                 padding-top: 12rem;
             }
         }
-
+        
         @media (max-width: 768px) {
             header {
                 padding: 1rem 2rem;
                 flex-direction: column;
                 gap: 1rem;
             }
-
             nav {
                 gap: 1rem;
             }
-
             .hero {
                 padding: 10rem 2rem 4rem;
             }
-
             .hero-text h1 {
                 font-size: 2.5rem;
             }
-
             .hero-text em {
                 font-size: 1.5rem;
             }
-
             .hero-img-container {
                 width: 250px;
                 height: 250px;
             }
-
             .section {
                 padding: 4rem 2rem;
             }
-
             .projects {
                 grid-template-columns: 1fr;
             }
         }
-
+        
         @media (max-width: 480px) {
             .hero-text h1 {
                 font-size: 2rem;
             }
-
             .hero-text em {
                 font-size: 1.2rem;
             }
-
             .hero-img-container {
                 width: 200px;
                 height: 200px;
             }
-
             .section h2 {
                 font-size: 2rem;
             }
@@ -667,7 +656,9 @@
                 <p>Passionate about building performant mobile applications with beautiful interfaces. Specializing in React Native development for both iOS and Android platforms.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/sundar-n-b0208b228/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
@@ -701,7 +692,8 @@
         <div class="projects">
             <div class="project-card">
                 <h3>Facepos - Payment Transaction</h3>
-                <p>Developed a secure and intelligent payment transaction platform with facial recognition authentication and QR-based peer-to-peer payments. Features include facial login, CTC wallet-based transfers, scan & pay, and Pay & Request functions for mobile or QR.</p>
+                <p>Developed a secure and intelligent payment transaction platform with facial recognition authentication and QR-based peer-to-peer payments. Features include facial login, CTC wallet-based transfers, scan & pay, and Pay & Request functions
+                    for mobile or QR.</p>
                 <div class="tech-used">
                     <span>React Native</span>
                     <span>Facial Recognition</span>
@@ -771,7 +763,7 @@
         <div class="resume-section">
             <h2>Download My Resume</h2>
             <p>Want to know more about my professional journey? Download my detailed resume to see my full experience and qualifications.</p>
-            <a href="sundareswaran_resume.pdf" class="resume-btn" download>
+            <a href="Sundareswaran-N.pdf" class="resume-btn" download>
                 <i class="fas fa-download"></i> Download PDF
             </a>
         </div>
@@ -791,29 +783,29 @@
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 30;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
-                
+
                 // Random properties
                 const size = Math.random() * 5 + 2;
                 const posX = Math.random() * 100;
                 const posY = Math.random() * 100;
                 const delay = Math.random() * 15;
                 const duration = Math.random() * 10 + 10;
-                
+
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 particle.style.left = `${posX}%`;
                 particle.style.top = `${posY}%`;
                 particle.style.animationDelay = `${delay}s`;
                 particle.style.animationDuration = `${duration}s`;
-                
+
                 particlesContainer.appendChild(particle);
             }
         }
-        
+
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
@@ -822,7 +814,7 @@
             } else {
                 header.classList.remove('scrolled');
             }
-            
+
             // Back to top button
             const backToTop = document.getElementById('backToTop');
             if (window.scrollY > 300) {
@@ -831,15 +823,15 @@
                 backToTop.classList.remove('visible');
             }
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -849,16 +841,16 @@
                 }
             });
         });
-        
+
         // Initialize particles when page loads
         window.addEventListener('load', createParticles);
-        
+
         // Add hover effect to project cards
         document.querySelectorAll('.project-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px)';
             });
-            
+
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
             });
@@ -867,14 +859,14 @@
         // 3D image effect on mouse move
         const heroImgContainer = document.querySelector('.hero-img-container');
         const heroImg3d = document.querySelector('.hero-img-3d');
-        
+
         if (heroImgContainer && heroImg3d) {
             heroImgContainer.addEventListener('mousemove', (e) => {
                 const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
                 const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
                 heroImg3d.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
             });
-            
+
             heroImgContainer.addEventListener('mouseleave', () => {
                 heroImg3d.style.transform = 'rotateX(10deg) rotateY(10deg)';
             });
